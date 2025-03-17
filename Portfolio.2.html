@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Lucas Calonge and Regina Mae E. Baguio">
+    <title>Lucas & Regina Portfolio ✨</title>
+    <link rel="icon" href="https://example.com/favicon.ico" type="image/x-icon">
+    <style>
+        /* Basic reset and some global styles */
+        body, h1, h2, p, ul, li {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Overall Background */
+        body {
+            background: linear-gradient(to bottom, #ff5f6d, #ffc371); /* Sunset gradient */
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Sunset gradient for header */
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 10px solid #2d3436;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+        }
+
+        nav {
+            text-align: center;
+            background-color: #dfe6e9;
+            padding: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #6c5ce7;
+            margin: 0 20px;
+            font-size: 1.2em;
+            padding: 12px 20px;
+            border-radius: 5px;
+            background: linear-gradient(135deg, #6c5ce7, #0984e3);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background: linear-gradient(135deg, #0984e3, #6c5ce7);
+            color: white;
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        section, article {
+            margin-bottom: 40px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 350px;
+            border: 2px solid #6c5ce7;
+        }
+
+        footer {
+            background-color: #2d3436;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* About section design */
+        section#about {
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            padding: 60px 20px;
+            text-align: center;
+            background-image: url('https://www.transparenttextures.com/patterns/diagonal-stripes-light.png');
+        }
+
+        section#about h2 {
+            font-size: 2.5em;
+            color: #ffffff;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        section#about .info-cards {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        section#about .card {
+            background: #6c5ce7;
+            color: white;
+            border-radius: 15px;
+            padding: 20px;
+            width: 280px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        section#about .card:hover {
+            transform: scale(1.05);
+        }
+
+        section#about .card h3 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        section#about .card p {
+            font-size: 1.2em;
+        }
+
+        section#about .card p.special {
+            font-weight: 500;
+        }
+
+        section#about .card .description {
+            font-size: 1em;
+            margin-top: 20px;
+        }
+
+        /* Portfolio Section Design */
+        section#portfolio {
+            background: linear-gradient(135deg, #ff9a8b, #ffc3a0); /* Soft sunset gradient */
+            padding: 60px 20px;
+            text-align: center;
+            background-image: url('https://www.transparenttextures.com/patterns/white-dots.png');
+        }
+
+        section#portfolio h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: #6c5ce7;
+        }
+
+        .skills-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .skill-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            width: 280px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .skill-card h3 {
+            font-size: 1.8em;
+            color: #6c5ce7;
+            margin-bottom: 10px;
+        }
+
+        .skill-card p {
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        /* Contact links */
+        .contact-links a {
+            display: inline-block;
+            margin: 10px;
+            text-decoration: none;
+            color: #ffffff;
+            background: linear-gradient(135deg, #0984e3, #6c5ce7);
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-links a:hover {
+            background: linear-gradient(135deg, #6c5ce7, #0984e3);
+            color: white;
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Lucas & Regina's Portfolio</h1>
+        <p>Your future IT professionals!</p>
+    </header>
+
+    <nav>
+        <a href="#about">About Us</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+        <section id="about">
+            <h2>About Us</h2>
+            <div class="info-cards">
+                <!-- Lucas's Info Card -->
+                <div class="card">
+                    <h3>Lucas Calonge</h3>
+                    <p>21 years old</p>
+                    <p class="special">Software Development Specialist</p>
+                    <p class="description">Based in Cebu City, Lucas is passionate about creating innovative software solutions and contributing to the tech world.</p>
+                </div>
+
+                <!-- Regina's Info Card -->
+                <div class="card" style="background: #00b894;">
+                    <h3>Regina Mae E. Baguio</h3>
+                    <p>19 years old</p>
+                    <p class="special">Web Development Specialist</p>
+                    <p class="description">Regina, from Cebu City, is an aspiring web developer with a strong passion for crafting beautiful, functional websites.</p>
+                </div>
+            </div>
+            <p style="font-size: 1.2em; color: #ffffff; margin-top: 40px; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);">Together, we are ready to tackle challenges and contribute to the future of technology!</p>
+        </section>
+
+        <section id="portfolio">
+            <h2>Our Skills & Portfolio</h2>
+            <div class="skills-container">
+                <!-- Lucas's Skills -->
+                <div class="skill-card">
+                    <h3>Lucas Calonge</h3>
+                    <p><strong>1. Full-stack Development</strong> - Building end-to-end web applications using various technologies.</p>
+                    <p><strong>2. Database Management</strong> - Expertise in designing and managing databases for web applications.</p>
+                    <p><strong>3. API Integration</strong> - Skilled in integrating third-party services using RESTful APIs.</p>
+                </div>
+
+                <!-- Regina's Skills -->
+                <div class="skill-card" style="background: #00b894;">
+                    <h3>Regina Mae E. Baguio</h3>
+                    <p><strong>1. Front-End Development</strong> - Specializing in HTML, CSS, JavaScript, and responsive web design.</p>
+                    <p><strong>2. UX/UI Design</strong> - Designing intuitive and user-friendly interfaces with a focus on user experience.</p>
+                    <p><strong>3. Web Optimization</strong> - Ensuring websites are fast, scalable, and SEO-friendly for better performance.</p>
+                </div>
+            </div>
+
+            <!-- YouTube Video -->
+            <h2>Learn More About Our Field</h2>
+            <iframe src="https://www.youtube.com/embed/CykufIPK_6o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>If you'd like to get in touch or collaborate with us, feel free to reach out!</p>
+            <div class="contact-links">
+                <a href="mailto:lucas@example.com">Email Lucas</a>
+                <a href="mailto:regina@example.com">Email Regina</a>
+                <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank">Gmail - Lucas</a>
+                <a href="https://www.facebook.com/Arggieey#" target="_blank">Facebook - Regina</a>
+            </div>
+
+            <!-- Google Map Embed -->
+            <h2>Our University Location</h2>
+            <iframe src="https://maps.google.com/maps?q=9Ge41oj8XhV36VaU9&output=embed" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen></iframe>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Lucas Calonge & Regina Mae E. Baguio. All rights reserved.</p>
+    </footer>
+</body>
+</html>
